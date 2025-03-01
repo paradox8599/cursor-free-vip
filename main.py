@@ -110,7 +110,7 @@ class Translator:
         try:
             locales_dir = os.path.join(os.path.dirname(__file__), 'locales')
             if hasattr(sys, '_MEIPASS'):
-                locales_dir = os.path.join(sys._MEIPASS, 'locales')
+                locales_dir = os.path.join(getattr(sys, '_MEIPASS'), 'locales')
             
             if not os.path.exists(locales_dir):
                 print(f"{Fore.RED}{EMOJI['ERROR']} Locales directory not found{Style.RESET_ALL}")
