@@ -10,19 +10,20 @@ _translator = None
 
 def cleanup_chrome_processes(translator=None):
     """清理所有Chrome相关进程"""
-    print("\n正在清理Chrome进程...")
-    try:
-        if os.name == 'nt':
-            os.system('taskkill /F /IM chrome.exe /T 2>nul')
-            os.system('taskkill /F /IM chromedriver.exe /T 2>nul')
-        else:
-            os.system('pkill -f chrome')
-            os.system('pkill -f chromedriver')
-    except Exception as e:
-        if translator:
-            print(f"{Fore.RED}❌ {translator.get('register.cleanup_error', error=str(e))}{Style.RESET_ALL}")
-        else:
-            print(f"清理进程时出错: {e}")
+    pass
+    # print("\n正在清理Chrome进程...")
+    # try:
+    #     if os.name == 'nt':
+    #         os.system('taskkill /F /IM chrome.exe /T 2>nul')
+    #         os.system('taskkill /F /IM chromedriver.exe /T 2>nul')
+    #     else:
+    #         os.system('pkill -f chrome')
+    #         os.system('pkill -f chromedriver')
+    # except Exception as e:
+    #     if translator:
+    #         print(f"{Fore.RED}❌ {translator.get('register.cleanup_error', error=str(e))}{Style.RESET_ALL}")
+    #     else:
+    #         print(f"清理进程时出错: {e}")
 
 def signal_handler(signum, frame):
     """处理Ctrl+C信号"""
