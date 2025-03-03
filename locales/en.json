@@ -131,7 +131,12 @@
         "register_process_error": "Register Process Error: {error}",
         "setting_password": "Setting Password",
         "manual_code_input": "Manual Code Input",
-        "manual_email_input": "Manual Email Input"
+        "manual_email_input": "Manual Email Input",
+        "password": "Password",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "exit_signal": "Exit Signal",
+        "email_address": "Email Address"
     },
     "auth": {
         "title": "Cursor Auth Manager",
@@ -233,5 +238,13 @@
         "directory_removed": "Directory Removed",
         "creating_block_file": "Creating Block File",
         "block_file_created": "Block File Created"
+    },
+    "updater": {
+        "checking": "Checking for updates...",
+        "new_version_available": "New version available! (Current: {current}, Latest: {latest})",
+        "updating": "Updating to the latest version. The program will restart automatically.",
+        "up_to_date": "You are using the latest version.",
+        "check_failed": "Failed to check for updates: {error}",
+        "continue_anyway": "Continuing with current version..."
     }
 }

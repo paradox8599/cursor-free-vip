@@ -3,10 +3,12 @@
 import os
 import sys
 import json
-from logo import print_logo
+from logo import print_logo, version
 from colorama import Fore, Style, init
 import locale
 import platform
+import requests
+import subprocess
 
 # 只在 Windows 系统上导入 windll
 if platform.system() == 'Windows':
@@ -203,8 +205,39 @@ def select_language():
         print(f"{Fore.RED}{EMOJI['ERROR']} {translator.get('menu.invalid_choice')}{Style.RESET_ALL}")
         return False
 
+def check_latest_version():
+    """Check if current version matches the latest release version"""
+    try:
+        print(f"\n{Fore.CYAN}{EMOJI['UPDATE']} {translator.get('updater.checking')}{Style.RESET_ALL}")
+        
+        # Get latest version from GitHub API with timeout
+        response = requests.get("https://api.github.com/repos/yeongpin/cursor-free-vip/releases/latest", timeout=5)
+        latest_version = response.json()["tag_name"].lstrip('v')
+        
+        if latest_version != version:
+            print(f"\n{Fore.YELLOW}{EMOJI['INFO']} {translator.get('updater.new_version_available', current=version, latest=latest_version)}{Style.RESET_ALL}")
+            
+            # Execute update command based on platform
+            if platform.system() == 'Windows':
+                update_command = 'irm https://raw.githubusercontent.com/yeongpin/cursor-free-vip/main/scripts/install.ps1 | iex'
+                subprocess.run(['powershell', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-Command', update_command], check=True)
+            else:
+                update_command = 'curl -fsSL https://raw.githubusercontent.com/yeongpin/cursor-free-vip/main/scripts/install.sh -o install.sh && chmod +x install.sh && ./install.sh'
+                subprocess.Popen(update_command, shell=True)
+            
+            print(f"\n{Fore.GREEN}{EMOJI['SUCCESS']} {translator.get('updater.updating')}{Style.RESET_ALL}")
+            sys.exit(0)
+        else:
+            print(f"{Fore.GREEN}{EMOJI['SUCCESS']} {translator.get('updater.up_to_date')}{Style.RESET_ALL}")
+            
+    except Exception as e:
+        print(f"{Fore.RED}{EMOJI['ERROR']} {translator.get('updater.check_failed', error=str(e))}{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}{EMOJI['INFO']} {translator.get('updater.continue_anyway')}{Style.RESET_ALL}")
+        return  # Continue with the program instead of blocking
+
 def main():
     print_logo()
+    check_latest_version()  # Add version check before showing menu
     print_menu()
     
     while True:

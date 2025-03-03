@@ -1,5 +1,19 @@
 # Change Log
 
+## v1.5.02
+1. Add: Generate Random Name Alias | 增加生成隨機真實姓名
+2. Add: Realistic Name Input | 增加真實姓名輸入
+3. Optimize: Error Handling | 優化錯誤處理
+4. Optimize: Translation | 優化翻譯
+5. Optimize: Performance | 優化性能
+
+## v1.5.01
+1. Add: Check Latest Version | 增加檢查最新版本
+2. Add: Update Command | 增加更新命令
+
+## v1.4.08
+1. Add: Print Some Account Info | 增加打印一些賬號信息
+
 ## v1.4.07
 1. Add Removed break statements after each operation | 修改結束event後的break暫停應用
 2. Added print_menu() calls to show the menu again | 添加print_menu（）調用以再次顯示菜單

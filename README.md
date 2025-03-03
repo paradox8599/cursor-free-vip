@@ -12,7 +12,7 @@
 [![Download](https://img.shields.io/github/downloads/yeongpin/cursor-free-vip/total?style=flat-square&logo=github&color=52c41a)](https://github.com/yeongpin/cursor-free-vip/releases/latest)
 
 </p>
-<h4>Support Latest 0.46.3 Version | 支持最新0.46.3本</h4>
+<h4>Support Latest 0.46.8 Version | 支持最新0.46.8本</h4>
 
 This is a tool to automatically register , support Windows and macOS systems, complete Auth verification, and reset Cursor's configuration.
 
@@ -108,6 +108,11 @@ irm https://raw.githubusercontent.com/yeongpin/cursor-free-vip/main/scripts/rese
 
 歡迎提交 Issue 和 Pull Request！
 
+
+<a href="https://github.com/yeongpin/cursor-free-vip/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yeongpin/cursor-free-vip" />
+</a>
+<br /><br />
 
 
 ## 📩 Disclaimer | 免責聲明
