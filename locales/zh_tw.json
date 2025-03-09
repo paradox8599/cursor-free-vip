@@ -117,7 +117,12 @@
         "first_name": "名字",
         "last_name": "姓氏",
         "exit_signal": "退出信號",
-        "email_address": "郵箱地址"
+        "email_address": "郵箱地址",
+        "config_created": "配置已創建",
+        "verification_failed": "驗證失敗",
+        "verification_error": "驗證錯誤: {error}",
+        "config_option_added": "配置項已添加: {option}",
+        "config_updated": "配置已更新"
     },
     "auth": {
         "title": "Cursor 認證管理器",
@@ -202,7 +207,8 @@
         "blocked_domains_loaded_timeout": "加載被屏蔽的域名超時: {timeout}秒",
         "blocked_domains_loaded_timeout_error": "加載被屏蔽的域名超時錯誤: {error}",
         "available_domains_loaded": "獲取到 {count} 個可用域名",
-        "domains_filtered": "過濾後剩餘 {count} 個可用域名"
+        "domains_filtered": "過濾後剩餘 {count} 個可用域名",
+        "trying_to_create_email": "嘗試創建郵箱: {email}"
     },
     "update": {
         "title": "禁用 Cursor 自动更新",

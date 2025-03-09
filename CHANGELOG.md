@@ -1,5 +1,29 @@
 # Change Log
 
+## v1.7.01
+- Refactoring: Extract configuration-related code from the `setup_driver` function to an independent `setup_config` function
+- Optimization: Improve code maintainability and make configuration management and browser settings more clear
+- Improvement: The creation and update logic of the configuration file is clearer and more independent
+
+## v1.6.03
+1. Hotfix: Small Problem | 修復一些問題
+
+## v1.6.02
+1. Hotfix: Small Problem | 修復一些問題
+2. Add: Test some Bypass Code | 測試一些繞過代碼
+
+## v1.6.01
+1. Fix: Cursor Auth | 修復Cursor Auth
+2. Add: Create Account Maximum Retry | 增加創建賬號最大重試次數
+3. Fix: Cursor Auth Error | 修復Cursor Auth錯誤
+4. Fix: Update Curl Faild | 修復更新Curl失敗
+
+## v1.5.03
+1. HOTFIX: Stuck on starting browser | 修復啟動瀏覽器卡住問題
+2. Small Fix: Error Handling | 小修錯誤處理
+3. Small Fix: Translation | 小修翻譯
+4. Small Fix: Performance | 小修性能
+
 ## v1.5.02
 1. Add: Generate Random Name Alias | 增加生成隨機真實姓名
 2. Add: Realistic Name Input | 增加真實姓名輸入
