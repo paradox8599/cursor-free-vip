@@ -201,17 +201,17 @@ class CursorRegistration:
         """Save Account Information to File"""
         try:
             # NOTE: 先更新认证信息
-            # print(f"{Fore.CYAN}{EMOJI['KEY']} {self.translator.get('register.update_cursor_auth_info')}...{Style.RESET_ALL}")
-            # if self.update_cursor_auth(email=self.email_address, access_token=token, refresh_token=token):
-            #     print(f"{Fore.GREEN}{EMOJI['SUCCESS']} {self.translator.get('register.cursor_auth_info_updated')}...{Style.RESET_ALL}")
-            # else:
-            #     print(f"{Fore.RED}{EMOJI['ERROR']} {self.translator.get('register.cursor_auth_info_update_failed')}...{Style.RESET_ALL}")
+            print(f"{Fore.CYAN}{EMOJI['KEY']} {self.translator.get('register.update_cursor_auth_info')}...{Style.RESET_ALL}")
+            if self.update_cursor_auth(email=self.email_address, access_token=token, refresh_token=token):
+                print(f"{Fore.GREEN}{EMOJI['SUCCESS']} {self.translator.get('register.cursor_auth_info_updated')}...{Style.RESET_ALL}")
+            else:
+                print(f"{Fore.RED}{EMOJI['ERROR']} {self.translator.get('register.cursor_auth_info_update_failed')}...{Style.RESET_ALL}")
 
             # NOTE: 重置机器ID
-            # print(f"{Fore.CYAN}{EMOJI['UPDATE']} {self.translator.get('register.reset_machine_id')}...{Style.RESET_ALL}")
-            # resetter = MachineIDResetter(self.translator)  # 创建实例时传入translator
-            # if not resetter.reset_machine_ids():  # 直接调用reset_machine_ids方法
-            #     raise Exception("Failed to reset machine ID")
+            print(f"{Fore.CYAN}{EMOJI['UPDATE']} {self.translator.get('register.reset_machine_id')}...{Style.RESET_ALL}")
+            resetter = MachineIDResetter(self.translator)  # 创建实例时传入translator
+            if not resetter.reset_machine_ids():  # 直接调用reset_machine_ids方法
+                raise Exception("Failed to reset machine ID")
             
             # Save account information to file
             with open('cursor_accounts.txt', 'a', encoding='utf-8') as f:
